@@ -1,13 +1,16 @@
 # Getting Started
 
+
 [Apache OpenWhisk](http://openwhisk.incubator.apache.org/) is a freely available open-source Serverless (FaaS) platform. The cool thing about this is that we can run it on any cloud or on prem. As developers we don't want to manage all the servers though (hence serverless, duh!) so it's easiest to use a managed OpenWhisk provider.
 
-[IBM Cloud Functions](https://console.bluemix.net/openwhisk/) is a an OpenWhisk provider and has a free account you can sign up and use for these workshops.
+[IBM Cloud Functions](https://console.bluemix.net/openwhisk/) is a an OpenWhisk provider and has a free account you can sign up for and use for these workshops.
 
 ### Registering for a free IBM Cloud Account
 
 1. If you don't have one already, sign up for a free IBM Cloud Account [here](https://ibm.biz/BdZfyY).
+
 2. Verify your account via the email the platform sends you.
+
 3. Log in to your IBM Cloud Account.
 
 ### Install the IBM Cloud CLI
@@ -110,5 +113,5 @@ Apache OpenWhisk has it's own [CLI](https://github.com/apache/incubator-openwhis
 
 🎉🎉🎉 **Congratulations, you've successfully registered an IBM Cloud account, configured the IBM Cloud CLI for Cloud Functions development and executed your first serverless function! Let's start using the platform to create our own serverless applications…** 🎉🎉🎉
 
-### Next Lab:
+### Next Lab
 [Creating and Managing Actions](/labs/creating-and-managing-actions.md)
