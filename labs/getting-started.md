@@ -114,4 +114,4 @@ Apache OpenWhisk has it's own [CLI](https://github.com/apache/incubator-openwhis
 🎉🎉🎉 **Congratulations, you've successfully registered an IBM Cloud account, configured the IBM Cloud CLI for Cloud Functions development and executed your first serverless function! Let's start using the platform to create our own serverless applications…** 🎉🎉🎉
 
 ### Next Lab
-[Creating and Managing Actions](/labs/creating-and-managing-actions.md)
+[Creating and Managing Actions](/labs/creating-and-invoking-actions.md)
