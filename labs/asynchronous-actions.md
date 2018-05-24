@@ -148,7 +148,7 @@ $ bx wsk action invoke --result weather --param location "Brooklyn, NY"
 }   
 ```
 
-🎉🎉🎉 **This is more like a real-word example. This action could be invoked thousands of times in parallel and it would just work! No having to manage infrastructure to build a scalable cloud API.** 🎉🎉🎉
+🎉🎉🎉 **This is more like a real-world example. This action could be invoked thousands of times in parallel and it would just work! No having to manage infrastructure to build a scalable cloud API.** 🎉🎉🎉
 
 ### Next Lab
 [Using Action Sequences](/labs/using-action-sequences.md)
