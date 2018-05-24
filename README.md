@@ -6,6 +6,10 @@ This workshop will teach you how to develop serverless applications, composed of
 
 By the end of the workshop you should be set up with a development environment and learnt how to create and invoke actions, work with parameters and logs and optionally learnt how to use and publish packages.
 
+## Intro Slides
+
+- [Serverless Intro](Serverless Intro.pdf)
+
 ## Labs
 
 - [Getting started](labs/getting-started.md)
