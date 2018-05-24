@@ -8,7 +8,7 @@ By the end of the workshop you should be set up with a development environment a
 
 ## Intro Slides
 
-- [Serverless Intro](Serverless Intro.pdf)
+- [Serverless Intro](Serverless%20Intro.pdf)
 
 ## Labs
 
