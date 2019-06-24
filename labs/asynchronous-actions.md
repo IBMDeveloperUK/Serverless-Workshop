@@ -29,11 +29,11 @@ A call to `reject()` can be used to reject the Promise and signal that the activ
 1. Run the following commands to create the action and invoke it:
 
 ```
-$ bx wsk action create asyncAction asyncAction.js
+$ ibmcloud wsk action create asyncAction asyncAction.js
 ```
 
 ```
-$ bx wsk action invoke --result asyncAction
+$ ibmcloud wsk action invoke --result asyncAction
 {
     "done": true
 }
@@ -44,13 +44,13 @@ Notice that you performed a blocking invocation of an asynchronous action.
 2. Fetch the activation log to see how long the activation took to complete:
 
 ```
-$ bx wsk activation list --limit 1 asyncAction
+$ ibmcloud wsk activation list --limit 1 asyncAction
 activations
 b066ca51e68c4d3382df2d8033265db0             asyncAction
 ```
 
 ```
-$ bx wsk activation get b066ca51e68c4d3382df2d8033265db0
+$ ibmcloud wsk activation get b066ca51e68c4d3382df2d8033265db0
 {
      "duration": 2026,
      ...
@@ -66,14 +66,14 @@ Let's look at what happens when an action invocation takes longer than the `time
 1. Update the `asyncAction` timeout to 1000ms.
 
 ```
-$ bx wsk action update asyncAction --timeout 1000
+$ ibmcloud wsk action update asyncAction --timeout 1000
 ok: updated action asyncAction
 ```
 
 2. Invoke the action and block on the result.
 
 ```
-$ bx wsk action invoke asyncAction --result
+$ ibmcloud wsk action invoke asyncAction --result
 {
     "error": "The action exceeded its time limits of 1000 milliseconds."
 }
@@ -84,14 +84,14 @@ The error message returned by the platform indicates the action didn't return a 
 1. Update the `asyncAction` timeout to 10000ms.
 
 ```
-$ bx wsk action update asyncAction --timeout 10000
+$ ibmcloud wsk action update asyncAction --timeout 10000
 ok: updated action asyncAction
 ```
 
 2. Invoke the action and block on the result.
 
 ```
-$ bx wsk action invoke asyncAction --result
+$ ibmcloud wsk action invoke asyncAction --result
 {
     "done": true
 }
@@ -138,11 +138,11 @@ This example also shows the need for asynchronous actions. The action returns a 
 1. Run the following commands to create the action and invoke it:
 
 ```
-$ bx wsk action create weather weather.js
+$ ibmcloud wsk action create weather weather.js
 ```
 
 ```
-$ bx wsk action invoke --result weather --param location "Brooklyn, NY"
+$ ibmcloud wsk action invoke --result weather --param location "Brooklyn, NY"
 {
  "msg": "It is 28 degrees in Brooklyn, NY and Cloudy"
 }   

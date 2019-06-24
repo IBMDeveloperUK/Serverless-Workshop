@@ -25,14 +25,14 @@ The JavaScript file might contain additional functions. However, by convention, 
 2. Create an action from the following JavaScript function. For this example, the action is called 'hello'.
 
 ```
-$ bx wsk action create hello hello.js
+$ ibmcloud wsk action create hello hello.js
 ok: created action hello
 ```
 
 3. List the actions that you have created:
 
 ```
-$ bx wsk action list
+$ ibmcloud wsk action list
 actions
 hello       private
 ```
@@ -48,7 +48,7 @@ You can invoke actions with a *blocking* invocation (i.e., request/response styl
 1. Invoke the `hello` action using the command-line as a blocking activation.
 
 ```
-$ bx wsk action invoke --blocking hello
+$ ibmcloud wsk action invoke --blocking hello
 ```
 
 ```
@@ -77,14 +77,14 @@ If you don't need the action result right away, you can omit the `—blocking` f
 2. Invoke the `hello` action using the command-line as a non-blocking activation.
 
 ```
-$ bx wsk action invoke hello
+$ ibmcloud wsk action invoke hello
 ok: invoked hello with id 6bf1f670ee614a7eb5af3c9fde813043
 ```
 
 3. Retrieve the activation result
 
 ```
-$ bx wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
+$ ibmcloud wsk activation result 6bf1f670ee614a7eb5af3c9fde813043
 {
     "payload": "Hello world"
 }
@@ -95,7 +95,7 @@ To access the most recent activation record, activation results or activation lo
 4. Run the following command to get your last activation result.
 
 ```
-$ bx wsk activation result --last
+$ ibmcloud wsk activation result --last
 {
     "payload": "Hello world"
 }
@@ -106,7 +106,7 @@ Note that you should not use an activation ID with the flag `--last`.
 5. If you forget to record the activation ID, you can get a list of activations ordered from the most recent to the oldest. Run the following command to get a list of your activations:
 
 ```
-$ bx wsk activation list
+$ ibmcloud wsk activation list
 activations
 44794bd6aab74415b4e42a308d880e5b         hello
 6bf1f670ee614a7eb5af3c9fde813043         hello

@@ -28,13 +28,13 @@ function main(params) {
 *The JavaScript library for Apache OpenWhisk is here: [https://github.com/apache/incubator-openwhisk-client-js/](https://github.com/apache/incubator-openwhisk-client-js/).* *This library is pre-installed in the IBM Cloud Functions runtime and does not need to be manually included.*
 
 ```
-$ bx wsk action create proxy proxy.js
+$ ibmcloud wsk action create proxy proxy.js
 ```
 
 2. Invoke the proxy with an incorrect password.
 
 ```
-$ bx wsk action invoke proxy -p password wrong -r
+$ ibmcloud wsk action invoke proxy -p password wrong -r
 {
     "error": "Password is incorrect!"
 }
@@ -43,7 +43,7 @@ $ bx wsk action invoke proxy -p password wrong -r
 3. Invoke the proxy with the correct password.
 
 ```
-$ bx wsk action invoke proxy -p password secret -p name Bernie -p place Vermont -r
+$ ibmcloud wsk action invoke proxy -p password secret -p name Bernie -p place Vermont -r
 {
     "greeting": "Hello Bernie from Vermont"
 }
@@ -52,7 +52,7 @@ $ bx wsk action invoke proxy -p password secret -p name Bernie -p place Vermont 
 4. Review the activations list to show both actions were invoked.
 
 ```
-$ bx wsk activation list -l 2
+$ ibmcloud wsk activation list -l 2
 activations
 8387302c81dc4d2d87302c81dc4d2dc6 hello
 e0c603c242c646978603c242c6c6977f proxy

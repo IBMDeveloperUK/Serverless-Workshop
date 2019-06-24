@@ -5,7 +5,7 @@ OpenWhisk supports a special kind of action called a "sequence". These actions a
 Here's an example of defining a sequence (`my_sequence`) which will invoke three actions (`a, b, c`).
 
 ```
-$ bx wsk action create my_sequence --sequence a,b,c
+$ ibmcloud wsk action create my_sequence --sequence a,b,c
 ```
 
 *Sequences behave like normal actions, you create, invoke and manage them as normal through the CLI.*
@@ -37,9 +37,9 @@ function join(params) {
 2. Create the following three actions
 
 ```
-$ bx wsk action create split funcs.js --main split
-$ bx wsk action create reverse funcs.js --main reverse
-$ bx wsk action create join funcs.js --main join
+$ ibmcloud wsk action create split funcs.js --main split
+$ ibmcloud wsk action create reverse funcs.js --main reverse
+$ ibmcloud wsk action create join funcs.js --main join
 ```
 
 #### Creating Sequence Actions
@@ -47,21 +47,21 @@ $ bx wsk action create join funcs.js --main join
 1. Test each action to verify it is working
 
 ```
-$ bx wsk action invoke split --result --param text "Hello world"
+$ ibmcloud wsk action invoke split --result --param text "Hello world"
 {
     "words": [
         "Hello",
         "world"
     ]
 }
-$ bx wsk action invoke reverse --result --param words '["hello", "world"]'
+$ ibmcloud wsk action invoke reverse --result --param words '["hello", "world"]'
 {
     "words": [
         "olleh",
         "dlrow"
     ]
 }
-$ bx wsk action invoke join --result --param words '["hello", "world"]'
+$ ibmcloud wsk action invoke join --result --param words '["hello", "world"]'
 {
     "text": "hello world"
 }
@@ -70,13 +70,13 @@ $ bx wsk action invoke join --result --param words '["hello", "world"]'
 2. Create the following action sequence.
 
 ```
-$ bx wsk action create reverse_words --sequence split,reverse,join
+$ ibmcloud wsk action create reverse_words --sequence split,reverse,join
 ```
 
 3. Test out the action sequence.
 
 ```
-$ bx wsk action invoke reverse_words --result --param text "hello world"
+$ ibmcloud wsk action invoke reverse_words --result --param text "hello world"
 {
     "text": "olleh dlrow"
 }

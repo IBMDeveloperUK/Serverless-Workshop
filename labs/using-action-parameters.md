@@ -17,7 +17,7 @@ The input parameters are passed as a JSON object parameter to the `main` functio
 2. Update the `hello` action with the new source code.
 
 ```
-$ bx wsk action update hello hello.js
+$ ibmcloud wsk action update hello hello.js
 ```
 
 #### Invoking action with parameters
@@ -27,7 +27,7 @@ When invoking actions through the command-line, parameter values can be passed a
 3. Invoke the `hello` action using explicit command-line parameters.
 
 ```
-$ bx wsk action invoke --result hello --param name Bernie --param place Vermont
+$ ibmcloud wsk action invoke --result hello --param name Bernie --param place Vermont
 {
     "payload": "Hello, Bernie from Vermont"
 }
@@ -45,7 +45,7 @@ $ bx wsk action invoke --result hello --param name Bernie --param place Vermont
 5. Invoke the `hello` action using parameters from a JSON file.
 
 ```
-$ bx wsk action invoke --result hello --param-file parameters.json
+$ ibmcloud wsk action invoke --result hello --param-file parameters.json
 {
     "payload": "Hello, Bernie from Vermont"
 }
@@ -68,7 +68,7 @@ Now the action expects a single `person` parameter to have fields `name` and `pl
 7. Invoke the action with a single `person` parameter that is valid JSON.
 
 ```
-$ bx wsk action invoke --result hello-person -p person '{"name": "Bernie", "place": "Vermont"}'
+$ ibmcloud wsk action invoke --result hello-person -p person '{"name": "Bernie", "place": "Vermont"}'
 ```
 
 The result is the same because the CLI automatically parses the `person` parameter value into the structured object that the action now expects:
@@ -92,7 +92,7 @@ Let's use the `hello` action from our previous example and bind a default value 
 1. Update the action by using the `—param` option to bind default parameter values.
 
 ```
-$ bx wsk action update hello --param place Vermont
+$ ibmcloud wsk action update hello --param place Vermont
 ```
 
 Passing parameters from a file requires the creation of a file containing the desired content in JSON format. The filename must then be passed to the `-param-file` flag:
@@ -106,13 +106,13 @@ Example parameter file called parameters.json:
 ```
 
 ```
-$ bx wsk action update hello --param-file parameters.json
+$ ibmcloud wsk action update hello --param-file parameters.json
 ```
 
 2. Invoke the action, passing only the `name` parameter this time.
 
 ```
-$ bx wsk action invoke --result hello --param name Bernie
+$ ibmcloud wsk action invoke --result hello --param name Bernie
 ```
 
 ```
@@ -126,7 +126,7 @@ Notice that you did not need to specify the place parameter when you invoked the
 3. Invoke the action, passing both `name` and `place` values. The latter overwrites the value that is bound to the action.
 
 ```
-$ bx wsk action invoke --result hello --param name Bernie --param place "Washington, DC"
+$ ibmcloud wsk action invoke --result hello --param name Bernie --param place "Washington, DC"
 {  
     "payload": "Hello, Bernie from Washington, DC"
 }

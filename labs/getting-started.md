@@ -15,16 +15,16 @@
 
 ### Install the IBM Cloud CLI
 
-Apache OpenWhisk has it's own [CLI](https://github.com/apache/incubator-openwhisk-cli) (command line interface) `wsk`. To make authenticating with the IBM platform easier we are going to use the IBM Cloud CLI `bx` for these workshops. This CLI provides a wrapper for the `wsk` CLI.
+Apache OpenWhisk has it's own [CLI](https://github.com/apache/incubator-openwhisk-cli) (command line interface) `wsk`. To make authenticating with the IBM platform easier we are going to use the IBM Cloud CLI `ibmcloud` for these workshops. This CLI provides a wrapper for the `wsk` CLI.
 
-1. Go to [this docs link](https://console.bluemix.net/docs/cli/reference/bluemix_cli/get_started.html#getting-started) and follow the short instructions to download and install the CLI.
+1. Go to [this docs link](https://cloud.ibm.com/docs/cli?topic=cloud-cli-install-ibmcloud-cli) and follow the short instructions to download and install the CLI.
 
 ### Log in to the IBM Cloud CLI
 
 1. Log in to the IBM Cloud CLI using the following command from a terminal:
 
    ```
-   $ bx login
+   $ ibmcloud login
    ```
 
 2. Choose an API endpoint from the list.
@@ -58,8 +58,8 @@ Apache OpenWhisk has it's own [CLI](https://github.com/apache/incubator-openwhis
   API endpoint:     https://api.eu-gb.bluemix.net (API version: 2.92.0)
   Region:           eu-gb
   User:             user@email.com
-  Account:          No account targeted, use 'bx target -c ACCOUNT_ID'
-  Resource group:   No resource group targeted, use 'bx target -g RESOURCE_GROUP'
+  Account:          No account targeted, use 'ibmcloud target -c ACCOUNT_ID'
+  Resource group:   No resource group targeted, use 'ibmcloud target -g RESOURCE_GROUP'
   Org:
   Space:
 
@@ -68,15 +68,15 @@ Apache OpenWhisk has it's own [CLI](https://github.com/apache/incubator-openwhis
 4. Run the following command to configure the organisation and space the CLI is targeting.
 
   ```
-  $ bx target --cf
+  $ ibmcloud target --cf
   Targeted org user@email.com
   Targeted space dev
 
   API endpoint:     https://api.eu-gb.bluemix.net (API version: 2.92.0)
   Region:           eu-gb
   User:             user@email.com
-  Account:          No account targeted, use 'bx target -c ACCOUNT_ID'
-  Resource group:   No resource group targeted, use 'bx target -g RESOURCE_GROUP'
+  Account:          No account targeted, use 'ibmcloud target -c ACCOUNT_ID'
+  Resource group:   No resource group targeted, use 'ibmcloud target -g RESOURCE_GROUP'
   Org:              user@email.com
   Space:            dev
   ```
@@ -86,7 +86,7 @@ Apache OpenWhisk has it's own [CLI](https://github.com/apache/incubator-openwhis
 1. Use this command to install the Cloud Functions plugin for the IBM Cloud CLI.
 
  ```
- $ bx plugin install cloud-functions
+ $ ibmcloud plugin install cloud-functions
  Looking up 'cloud-functions' from repository 'Bluemix'...
  Plug-in 'cloud-functions 1.0.7' found in repository 'Bluemix'
  Attempting to download the binary file...
@@ -103,7 +103,7 @@ Apache OpenWhisk has it's own [CLI](https://github.com/apache/incubator-openwhis
 1. Run the following command to invoke a test function from the command-line.
 
  ```
- $ bx wsk action invoke whisk.system/utils/echo -p message hello --result
+ $ ibmcloud wsk action invoke whisk.system/utils/echo -p message hello --result
  {
      "message": "hello"
  }
