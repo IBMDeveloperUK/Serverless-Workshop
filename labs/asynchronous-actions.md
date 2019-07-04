@@ -131,7 +131,7 @@ function main(params) {
 }
 ```
 
-Note that the action in the example uses the JavaScript `request` library to make an HTTP request to the Yahoo Weather API, and extracts fields from the JSON result. The [References](https://github.com/apache/incubator-openwhisk/blob/master/docs/reference.md#javascript-runtime-environments) detail the Node.js packages that you can use in your actions.
+Note that the action in the example uses the JavaScript `request` library to make an HTTP request to the Yahoo Weather API, and extracts fields from the JSON result. The [References](https://github.com/apache/incubator-openwhisk/blob/master/docs/actions-nodejs.md#nodejs-version-6-environment) detail the Node.js packages that you can use in your actions.
 
 This example also shows the need for asynchronous actions. The action returns a Promise to indicate that the result of this action is not available yet when the function returns. Instead, the result is available in the `request` callback after the HTTP call completes, and is passed as an argument to the `resolve()` function.
 
