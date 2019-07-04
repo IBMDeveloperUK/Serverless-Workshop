@@ -7,7 +7,7 @@
 
 ### Registering for a free IBM Cloud Account
 
-1. If you don't have one already, sign up for a free IBM Cloud Account [here](https://ibm.biz/BdZfyY).
+1. If you don't have one already, sign up for a free IBM Cloud Account [here](https://ibm.biz/BdzPbk).
 
 2. Verify your account via the email the platform sends you.
 
